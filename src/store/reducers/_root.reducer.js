@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
+import userReducer from './user.reducer';
 
 export default function rootReducer() {
   const reducerMap = {
-    // error: errorReducer,
+    user: userReducer,
   };
 
   return combineReducers(reducerMap);

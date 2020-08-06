@@ -11,4 +11,6 @@ class Home extends Component {
   }
 }
 
-export default connect()(Home);
+const mapStoreToProps = (store) => ({ store });
+
+export default connect(mapStoreToProps)(Home);
