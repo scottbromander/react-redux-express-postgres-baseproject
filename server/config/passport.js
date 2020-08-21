@@ -11,7 +11,7 @@ passport.deserializeUser(async (id, done) => {
       id,
     ]);
 
-    const user = result?.rows?.[0];
+    const user = result.rows?.[0];
     if (user) {
       done(null, user);
     } else {

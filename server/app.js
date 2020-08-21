@@ -2,7 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const compression = require('compression');
 const session = require('cookie-session');
+const passport = require('./config/passport');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
@@ -21,6 +23,9 @@ app.use(
     secure: false,
   })
 );
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.static('build'));
 
