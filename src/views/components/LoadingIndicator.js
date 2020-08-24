@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function LoadingIndicator(props) {
-  const { isActive = false } = props; // defaultProps example
+  const { isActive = false } = props;
   const { children } = props;
 
   return (
